@@ -106,7 +106,8 @@ class VMCPU {
         void vmPrintHX(VDWORD);
         void vmPrintN(VBYTE s);
         void vmPrintHXN(VDWORD);
-        VBYTE getByteFromFrame(int);
+        void writeByteIntoFrame(int, int, std::vector<VBYTE>);
+        std::vector<VBYTE> getByteFromFrame(int, int);
         int loadFrame(int);
         void restoreFrame();
         //void vmScan();
